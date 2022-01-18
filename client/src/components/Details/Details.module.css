@@ -1,0 +1,153 @@
+.DetailContainer {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+
+.divScreenshot {
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.imageMain {
+    width: 95%;
+    height: 50%;
+    border-radius: 15px;
+}
+
+
+.divScreenshot {
+    width: 80vw;
+}
+
+.screenshot {
+    width: 40%;
+    margin: 15px 15px;
+    border-radius: 15px;
+}
+
+.trailerVideo {
+    width: 80vw;
+    border-radius: 15px;
+}
+
+
+.DivRatings {
+    margin: 25px;
+    display: inline-block;
+}
+
+
+.ratingGood {
+    border: 1px solid #6dc849;
+    color: #6dc849;
+    width: 45px;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 5px;
+
+}
+.ratingMedium {
+    border: 1px solid rgb(172, 172, 19);
+    color: rgb(172, 172, 19);
+    width: 45px;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 5px;
+}
+.ratingBad {
+    border: 1px solid rgb(151, 51, 51);
+    color: rgb(151, 51, 51);
+    width: 45px;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 5px;
+}
+
+
+
+.exceptional {
+    color: #fff;
+
+    width: 5vw;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 5px 25px;
+}
+.recommended {
+    color: #fff;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 5px 25px;
+    margin: 1% auto;
+}
+.meh {
+    color: #fff;
+    width: 5vw;
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin: 1% auto;
+    padding: 5px 25px;
+}
+.skip {
+    color: #fff;
+    width: 5vw;
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin: 1% auto;
+    padding: 5px 25px;
+}
+
+.spanCounts {
+    color: rgb(92, 90, 90);
+}
+
+.ReleasedP2 {
+    color: rgb(92, 90, 90);
+}
+.GenresP {
+    color: rgb(92, 90, 90);
+}
+.PlatformsP {
+    color: rgb(92, 90, 90);
+}
+
+
+.PlatAndGen {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.WOscreenshot,
+.WOtrailer,
+.NameTitle,
+.RatingP,
+.ReleasedP1,
+.GenresTitles,
+.PlatformsTitle,
+.DescriptionTitle,
+.DescriptionP,
+.RatingsTitle,
+.ScreenshotsTitle,
+.TrailerTitle {
+    color: #ffffff;
+}
+
+
+@media screen and (max-width: 780px) {
+    .screenshot {
+        width: 90%;
+        margin: 15px;
+        border-radius: 15px;
+    }
+}

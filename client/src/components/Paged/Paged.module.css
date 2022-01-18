@@ -1,0 +1,44 @@
+.PagedNav {
+    margin: 50px;
+
+}
+.PagedDiv {
+    display: block;
+    width: 100%;
+}
+.buttonPaged {
+    margin:  25px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: rgba(128, 128, 128, 0.616);
+    
+}
+
+
+.buttonPaged:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+    .PagedDiv {
+        display: inline-block;
+        width: 100vw;
+        margin: 0;
+    }
+    .PagedNav {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+    }
+    .ulPaged {       
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+
+    }
+    .buttonPaged {
+     
+        
+    }
+}
