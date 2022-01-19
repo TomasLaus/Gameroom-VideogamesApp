@@ -36,9 +36,9 @@ const deleteSelection = (input, sel) => {
     } 
     
     return errors;
-  }
+}
 
-let platformsOptions = [
+export let platformsOptions = [
     {id: 1, name:"PC"},
     {id: 2, name:"PLAYSTATION 5"},
     {id: 3, name:"XBOX ONE"},
@@ -48,49 +48,16 @@ let platformsOptions = [
     {id: 7, name:"IOS"},
     {id: 8, name:"ANDROID"},
     {id: 9, name:"NINTENDO 3DS"},
-    {id: 10, name:"NINTENDO DS"},
-    {id: 11, name:"NINTENDO DSI"},
+    {id: 10, name:"WII U"},
     {id: 12, name:"MACOS"},
     {id: 13, name:"LINUX"},
     {id: 14, name:"XBOX 360"},
     {id: 15, name:"XBOX"},
     {id: 16, name:"PLAYSTATION 3"},
     {id: 17, name:"PLAYSTATION 2"},
-    {id: 18, name:"PLAYSTATION"},
     {id: 19, name:"PS VITA"},
-    {id: 20, name:"PSP"},
-    {id: 21, name:"WII U"},
-    {id: 22, name:"WII"},
-    {id: 23, name:"GAMECUBE"},
-    {id: 24, name:"NINTENDO 64"},
-    {id: 25, name:"GAME BOY ADVANCE"},
-    {id: 26, name:"GAME BOY COLOR"},
-    {id: 27, name:"GAME BOY"},
-    {id: 28, name:"SNES"},
-    {id: 29, name:"NES"},
-    {id: 30, name:"CLASSIC MACINTOSH"},
-    {id: 31, name:"APPLE II"},
-    {id: 32, name:"COMMODORE / AMIGA"},
-    {id: 33, name:"ATARI 7800"},
-    {id: 34, name:"ATARI 5200"},
-    {id: 35, name:"ATARI 2600"},
-    {id: 36, name:"ATARI FLASHBACK"},
-    {id: 37, name:"ATARI 8-BIT"},
-    {id: 38, name:"ATARI ST"},
-    {id: 39, name:"ATARI LYNX"},
-    {id: 40, name:"ATARI XEGS"},
-    {id: 41, name:"GENESIS"},
-    {id: 42, name:"SEGA SATURN"},
-    {id: 43, name:"SEGA CD"},
-    {id: 44, name:"SEGA 32X"},
-    {id: 45, name:"SEGA MASTER SYSTEM"},
-    {id: 46, name:"DREAMCAST"},
-    {id: 47, name:"3DO"},
-    {id: 48, name:"JAGUAR"},
-    {id: 49, name:"GAME GEAR"},
-    {id: 50, name:"NEO GEO"},
     {id: 51, name:"WEB"},
-  ];
+];
 
 function Create() {
     const dispatch = useDispatch();
@@ -171,6 +138,19 @@ function Create() {
         navigate('/home')
        
     };
+
+    const ResetPlatforms = () => {
+        setInput({
+            ...input,
+            platforms: [],
+        })
+    }
+    const ResetGenres = () => {
+        setInput({
+            ...input,
+            genres: [],
+        })
+    }
 
     useEffect (() => {
         dispatch(getGenres());
@@ -269,6 +249,7 @@ function Create() {
                             ))}
                             
                             </select>
+                            <div className={styles.divResetForm} onClick={() => ResetPlatforms()}><i className="fas fa-sync-alt"></i></div>
                             {errors.platforms && <p className={styles.formErrors}>{errors.platforms}</p>}
 
                     </div>
@@ -295,6 +276,8 @@ function Create() {
                             </select>
                             {errors.genres && <p className={styles.formErrors}>{errors.genres}</p>}
 
+                            
+                            <div className={styles.divResetForm} onClick={() => ResetGenres()}><i className="fas fa-sync-alt"></i></div>
                             <p className={styles.platP}>{input.genres.join(', ')}</p>
                         </div> 
 

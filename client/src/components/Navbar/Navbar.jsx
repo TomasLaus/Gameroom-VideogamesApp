@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import CreatedOrExist from '../Filters/CreatedOrExist'
 import Genres from '../Filters/Genres'
+import Platforms from '../Filters/Platforms'
 import Years from '../Filters/Years'
 import './Navbar.css'
 
@@ -18,6 +19,7 @@ function Navbar( {handleFilter, handleRating} ) {
                 <CreatedOrExist />
                 <Genres/>
                 <Years/>
+                <Platforms/>
 
 
                 <div style={{height: '100px'}}>

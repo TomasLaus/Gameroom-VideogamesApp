@@ -10,6 +10,7 @@ import {
      FILTER_RATING,
      FILTER_BY_GENRE,
      FILTER_BY_YEAR,
+     FILTER_BY_PLATFORM
 } from './constants';
 
 export const getAllVideogames =()=> {
@@ -166,3 +167,20 @@ export function filterByYear (payload) {
       
     }
 }
+
+export function filterByPlatform (payload) {
+    
+    return async function (dispatch) {
+        try {
+            dispatch ({
+                type: FILTER_BY_PLATFORM,
+                payload
+            });
+        }
+        catch (error) {
+            console.log(error)
+        }    
+      
+    }
+}
+

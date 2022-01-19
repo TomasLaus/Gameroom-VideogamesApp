@@ -8,6 +8,7 @@ import {GET_VIDEOGAMES,
   FILTER_RATING,
   FILTER_BY_GENRE,
   FILTER_BY_YEAR,
+  FILTER_BY_PLATFORM
 } from '../actions/constants';
 
 const initialState = {
@@ -96,8 +97,7 @@ const rootReducer = (state = initialState, action) => {
             case FILTER_RATING: 
                 let orderRating;
                 if (action.payload === "asc") {
-                    console.log(action.payload)
-                    orderRating = state.allVideogames.sort(function (a, b) {
+                    orderRating = state.allVideogames.sort((a, b) => {
                         if (a.rating > b.rating) {
                             return 1;
                         }
@@ -108,8 +108,7 @@ const rootReducer = (state = initialState, action) => {
                     });
                 }
                 if (action.payload === "desc") {
-                    console.log(action.payload)
-                    orderRating = state.allVideogames.sort(function (a, b) {
+                    orderRating = state.allVideogames.sort((a, b) => {
                         if (a.rating > b.rating) {
                         return -1;
                     }
@@ -145,6 +144,16 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 videogames: gamesFiltered
             }
+
+        case FILTER_BY_PLATFORM: 
+            const allJuegos2 = state.allVideogames
+            const filterGames2 =allJuegos2.filter(el => el.platforms.includes(action.payload)) 
+            const gamesFilteredPlatforms = action.payload === 'All' ? allJuegos2 : filterGames2
+            return {
+                ...state,
+                videogames: gamesFilteredPlatforms
+            }
+
 
         default: 
           return state;

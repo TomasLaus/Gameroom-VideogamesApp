@@ -87,7 +87,14 @@ i {
     text-decoration: none;
 }
 
-
+.divResetForm i {
+    color: rgba(255, 255, 255, 0.596);
+    transition: all 0.2s;
+}
+.divResetForm i:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
 
 .formRatingTitle {
     color: #ffffff41; 

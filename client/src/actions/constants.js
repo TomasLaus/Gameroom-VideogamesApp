@@ -8,3 +8,4 @@ export const FILTER_ALPH = "FILTER_ALPH";
 export const FILTER_RATING = "FILTER_RATING";
 export const FILTER_BY_GENRE = "FILTER_BY_GENRE";
 export const FILTER_BY_YEAR = "FILTER_BY_YEAR";
+export const FILTER_BY_PLATFORM = "FILTER_BY_PLATFORM";

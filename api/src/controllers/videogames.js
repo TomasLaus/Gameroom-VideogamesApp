@@ -26,7 +26,7 @@ const apiInfo = async () => {
                 image: e.background_image,
                 released: e.released,
                 rating: e.rating,
-                platforms: e.platforms.map(p => p.platform.name),
+                platforms: e.platforms.map(p => p.platform.name.toUpperCase()),
                 genres: e.genres.map(g => g.name),
                 ratings: e.ratings,
                 
@@ -112,7 +112,7 @@ const getAll = async (req, res, next) => {
                      image: r.background_image,
                      released: r.released,
                      rating: r.rating,
-                     platforms: r.platforms.map(p => p.platform.name),
+                     platforms: r.platforms.map(p => p.platform.name.toUpperCase()),
                      genres: r.genres.map(g => g.name),
                  }
              })

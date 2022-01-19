@@ -41,7 +41,7 @@
 
 
 .ratingGood {
-    border: 1px solid #6dc849;
+    border: 1px solid #6dc84983;
     color: #6dc849;
     width: 45px;
     height: 30px;
@@ -49,10 +49,18 @@
     border-radius: 5px;
     text-align: center;
     padding: 5px 5px;
+    transition: all 0.3s;
 
 }
+.ratingGood:hover {
+    border: 1px solid #6dc849;
+    cursor: pointer;
+    padding: auto 3px;
+}
+
+
 .ratingMedium {
-    border: 1px solid rgb(172, 172, 19);
+    border: 1px solid rgba(172, 172, 19, 0.548);
     color: rgb(172, 172, 19);
     width: 45px;
     height: 30px;
@@ -60,16 +68,27 @@
     border-radius: 5px;
     text-align: center;
     padding: 5px 5px;
+    transition: all 0.3s;
+
+}
+.ratingMedium:hover {
+    border: 1px solid rgb(172, 172, 19);
+    cursor: pointer;
 }
 .ratingBad {
-    border: 1px solid rgb(151, 51, 51);
+    border: 1px solid rgba(151, 51, 51, 0.521);
     color: rgb(151, 51, 51);
     width: 45px;
     height: 30px;
     margin: 0 auto;
     border-radius: 5px;
     text-align: center;
+    transition: all 0.3s;
     padding: 5px 5px;
+}
+.ratingBad:hover {
+    border: 1px solid rgb(151, 51, 51);
+    cursor: pointer;
 }
 
 
@@ -78,33 +97,57 @@
     color: #fff;
 
     width: 5vw;
-    border: 1px solid gray;
+    border: 1px solid rgba(128, 128, 128, 0.452);
     border-radius: 15px;
     padding: 5px 25px;
+    transition: all 0.2s ease;
 }
+.exceptional:hover {
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
 .recommended {
     color: #fff;
-    border: 1px solid gray;
+    border: 1px solid rgba(128, 128, 128, 0.452);
     border-radius: 15px;
     padding: 5px 25px;
     margin: 1% auto;
+    transition: all 0.2s ease;
 }
+.recommended:hover {
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
 .meh {
     color: #fff;
     width: 5vw;
-    border: 1px solid gray;
+    border: 1px solid rgba(128, 128, 128, 0.452);
     border-radius: 15px;
     margin: 1% auto;
     padding: 5px 25px;
+    transition: all 0.2s ease;
 }
+.meh:hover {
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
 .skip {
     color: #fff;
     width: 5vw;
-    border: 1px solid gray;
+    border: 1px solid rgba(128, 128, 128, 0.452);
     border-radius: 15px;
     margin: 1% auto;
     padding: 5px 25px;
+    transition: all 0.2s ease;
 }
+.skip:hover {
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
 
 .spanCounts {
     color: rgb(92, 90, 90);
